@@ -13,7 +13,7 @@ const Navbar = () => {
     ];
     return (
         <header className="sticky top-0 z-30 w-full bg-white bg-opacity-95 shadow text-black text-sm">
-            <div className="flex flex-wrap flex-row justify-between px-10 items-center">
+            <div className="flex flex-wrap flex-row justify-between md:px-10 items-center">
                 <Link href='/'>
                     <Image
                         src='/logo.svg'
