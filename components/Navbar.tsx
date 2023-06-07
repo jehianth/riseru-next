@@ -1,10 +1,24 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
+    const headerRef = useRef<HTMLDivElement>(null); // Create a ref for the header
+
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [navbar]);
+
+    const handleClickOutside = (event: MouseEvent) => {
+        if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+            setNavbar(false);
+        }
+    };
     const menus = [
         { href: "/", text: "Home" },
         { href: "/catalog", text: "Catalog" },
@@ -14,7 +28,7 @@ const Navbar = () => {
         { href: "#available", text: "Available On" },
     ];
     return (
-        <header className="sticky top-0 z-30 w-full bg-white bg-opacity-95 shadow text-black text-sm">
+        <header ref={headerRef} className="sticky top-0 z-30 w-full bg-white bg-opacity-95 shadow text-black text-sm">
             <div className="flex flex-wrap flex-row justify-between md:px-10 items-center">
                 <Link href='/'>
                     <Image
