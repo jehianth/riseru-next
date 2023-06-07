@@ -1,8 +1,10 @@
-import React from 'react'
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
 const Navbar = () => {
+    const [navbar, setNavbar] = useState(false);
     const menus = [
         { href: "/", text: "Home" },
         { href: "/catalog", text: "Catalog" },
@@ -22,6 +24,15 @@ const Navbar = () => {
                         alt='Logo Riseru'
                     />
                 </Link>
+                <div className='md:hidden mt-2'>
+                    <button onClick={() => setNavbar(!navbar)}>
+                        {navbar ? (
+                            <Image src='/close.png' width={37} height={37} alt='' className='mr-4'/>
+                        ) : (
+                            <Image src='/hamburger.png' width={30} height={30} alt='' className='mr-5'/>
+                        )}
+                    </button>
+                </div>
                 <nav className="hidden md:py-1 md:block ml-auto">
                     <ul className="flex">
                         {menus.map((menu, index) => (
@@ -34,6 +45,19 @@ const Navbar = () => {
                     </ul>
                 </nav>
             </div>
+            <div>
+                    <div className={`md:hidden md:pb-0 md:mt-0 ${navbar ? 'md:p-0' : 'hidden'}`}>
+                        <ul className="md:h-auto md:flex">
+                            {menus.map((menu, index) => (
+                                <li key={index} className=' py-3 md:px-6 text-center border-t-[1.5px] md:border-b-0  hover:bg-orange-600  border-orange-600  md:hover:text-orange-400 md:hover:bg-transparent'>
+                                    <Link href={menu.href} onClick={() => setNavbar(!navbar)}>
+                                        {menu.text}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
         </header>
     )
 }
