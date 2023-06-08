@@ -28,7 +28,7 @@ const Navbar = () => {
         { href: "#available", text: "Available On" },
     ];
     return (
-        <header ref={headerRef} className="sticky top-0 z-30 w-full bg-white bg-opacity-95 shadow text-black text-sm">
+        <header ref={headerRef} className="sticky top-0 z-30 w-full bg-white shadow text-black text-sm">
             <div className="flex flex-wrap flex-row justify-between md:px-10 items-center">
                 <Link href='/'>
                     <Image
