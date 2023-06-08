@@ -10,9 +10,14 @@ const Hero = () => {
         width: "100%",
         height: "130vh",
     };
+    const mobileStyle = {
+        backgroundPosition: "calc(49%) center",
+        backgroundSize: "300%",
+        height: "110vh",
+    };
     return (
-        <section style={sectionStyle}>
-            <h1 className="md:text-6xl text-5xl text-center font-bold mt-20">Elegant, Classy, Futuristic.</h1>
+        <section style={{ ...sectionStyle, ...mobileStyle }}>
+            <h1 className="md:text-6xl text-5xl text-center font-bold mt-6 md:mt-20">Elegant, Classy, Futuristic.</h1>
             <h6 className="text-center px-5 md:px-0 md:mt-8 mt-3 md:text-base text-xs">Introducing Kalavinka, a metal build figure that advanced imagination and transformation features to <br className="hidden md:block"/>please you with the most weariness parts of a figurine.</h6>
             <div className="flex flex-col items-center justify-center mt-5">
                 <Link href='/'>
