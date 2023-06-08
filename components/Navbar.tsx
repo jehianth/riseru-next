@@ -21,7 +21,7 @@ const Navbar = () => {
     };
     const menus = [
         { href: "/", text: "Home" },
-        { href: "/catalog", text: "Catalog" },
+        { href: "https://www.tokopedia.com/riseruhobbyshop/product", text: "Catalog" },
         { href: "#overview", text: "Overview" },
         { href: "#whychooseus", text: "Why Choose Us?" },
         { href: "#aboutus", text: "About Us" },
