@@ -112,7 +112,7 @@ const Footer = () => {
                     <h6 className='text-xs text-zinc-400 pt-3 w-fit hover:text-orange-600'>Refund Policy</h6>
                 </Link>
             </div>
-            <hr className='px-[90vh] border-zinc-500'/>
+            <hr className='px-48 md:px-[90vh] border-zinc-500'/>
             <h6 className='text-xs text-zinc-400 py-5 w-fit'>© 2023 Riseru. All rights reserved.</h6>
         </section>
     )
