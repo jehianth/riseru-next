@@ -22,7 +22,7 @@ const Whychooseus = () => {
     ];
     return (
         <section id='whychooseus' className='bg-orange-600 w-full flex flex-col items-center justify-center'>
-            <h1 className='text-center text-3xl font-semibold mt-10 border rounded-full py-4 px-8'>Why Choose Us?</h1>
+            <h1 className='text-center text-3xl font-semibold mt-10 border rounded-full py-4 px-8 text-white'>Why Choose Us?</h1>
             <div className='bg-white m-10 w-96 h-[850px] md:w-[800px] md:h-[500px] rounded-xl flex flex-col md:flex-row items-center justify-center'>
                 <Image src='/benefit.svg' width={280} height={447} alt='' className='md:ml-10 md:mr-20 mb-4'></Image>
                 <div className='grid grid-row md:gap-4'>

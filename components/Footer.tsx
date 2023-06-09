@@ -21,17 +21,17 @@ const Footer = () => {
         setPhoneHovered(false);
     };
     return (
-        <section className="flex flex-col items-center ">
+        <section className="bg-black flex flex-col items-center ">
             <div className='hidden w-full md:flex flex-row items-center justify-between px-28 py-10'>
                 <div className='w-max'>
                     <Image src='/logo-footer.png' width={106} height={60} alt='Logo Riseru'/>
-                    <h3 className='text-lg font-bold'>Channel your hobbies by purchasing <br/>your favorite merchandise.</h3>
+                    <h3 className='text-white text-lg font-bold'>Channel your hobbies by purchasing <br/>your favorite merchandise.</h3>
                     <h6 className='text-xs text-zinc-400 w-fit mt-4'>Riseru, 2023.</h6>
                 </div>
                 <div className='w-max'>
                     <div className='flex flex-row items-center justify-between'>
                         <div className='flex flex-col ml-4'>
-                            <h5 className='font-semibold'>Contact</h5>
+                            <h5 className='text-white font-semibold'>Contact</h5>
                             <Link href='mailto:support@riseru.id' target='_blank' className='flex flex-row my-3 cursor-pointer' onMouseEnter={handleEmailMouseEnter} onMouseLeave={handleEmailMouseLeave}>
                                 {isEmailHovered ? (
                                     <Image src='/email(1).png' width={16} height={16} alt=''/>
@@ -50,7 +50,7 @@ const Footer = () => {
                             </Link>          
                         </div>
                         <div className='flex flex-col ml-10'>
-                            <h5 className='font-semibold'>Support</h5>
+                            <h5 className='text-white font-semibold'>Support</h5>
                             <Link href='/support'>
                                 <h6 className='text-xs text-zinc-400 my-3 w-fit hover:text-orange-600'>Feedback</h6>
                             </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
                             </Link>
                         </div>
                         <div className='flex flex-col ml-10'>
-                            <h5 className='font-semibold mb-[12px] pt-[28px]'>Legal</h5>
+                            <h5 className='text-white font-semibold mb-[12px] pt-[28px]'>Legal</h5>
                             <Link href='/legal'>
                                 <h6 className='text-xs text-zinc-400 w-fit hover:text-orange-600'>Term Of Service</h6>
                             </Link>
@@ -75,9 +75,9 @@ const Footer = () => {
             </div>
             <div className='md:hidden flex flex-col my-10 items-center'>
                 <Image src='/logo-footer.png' width={106} height={60} alt='Logo Riseru'/>
-                <h3 className='font-semibold text-center my-2'>Channel your hobbies by purchasing <br/>your favorite merchandise.</h3>
+                <h3 className='font-semibold text-center my-2 text-white'>Channel your hobbies by purchasing <br/>your favorite merchandise.</h3>
                 <h6 className='text-xs text-zinc-400 w-fit'>Riseru, 2023.</h6>
-                <h5 className='font-semibold mt-8'>Contact</h5>
+                <h5 className='font-semibold mt-8 text-white'>Contact</h5>
                 <Link href='mailto:support@riseru.id' target='_blank' className='flex flex-row my-3 cursor-pointer' onMouseEnter={handleEmailMouseEnter} onMouseLeave={handleEmailMouseLeave}>
                     {isEmailHovered ? (
                         <Image src='/email(1).png' width={16} height={16} alt=''/>
@@ -94,14 +94,14 @@ const Footer = () => {
                     )}
                     <h6 className='text-xs text-zinc-300 hover:text-orange-600 ml-2 w-fit'>+62 851-5543-3460</h6>
                 </Link>
-                <h5 className='font-semibold mt-8'>Support</h5>
+                <h5 className='font-semibold mt-8 text-white'>Support</h5>
                 <Link href='/support'>
                     <h6 className='text-xs text-zinc-400 my-3 w-fit hover:text-orange-600'>Feedback</h6>
                 </Link>
                 <Link href='/support'>
                     <h6 className='text-xs text-zinc-400 w-fit hover:text-orange-600'>Help Center (FAQ)</h6>
                 </Link>
-                <h5 className='font-semibold mb-[12px] pt-[28px]'>Legal</h5>
+                <h5 className='font-semibold mb-[12px] pt-[28px] text-white'>Legal</h5>
                 <Link href='/legal'>
                     <h6 className='text-xs text-zinc-400 w-fit hover:text-orange-600'>Term Of Service</h6>
                 </Link>

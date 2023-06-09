@@ -63,7 +63,7 @@ const Navbar = () => {
                     <div className={`md:hidden md:pb-0 md:mt-0 ${navbar ? 'md:p-0' : 'hidden'}`}>
                         <ul className="md:h-auto md:flex">
                             {menus.map((menu, index) => (
-                                <li key={index} className=' py-3 md:px-6 text-center border-t-[1.5px] md:border-b-0  hover:bg-orange-600  border-orange-600  md:hover:text-orange-400 md:hover:bg-transparent'>
+                                <li key={index} className=' py-3 md:px-6 text-center border-t-[1.5px] md:border-b-0  hover:bg-orange-600  md:hover:text-orange-400 md:hover:bg-transparent'>
                                     <Link href={menu.href} onClick={() => setNavbar(!navbar)}>
                                         {menu.text}
                                     </Link>

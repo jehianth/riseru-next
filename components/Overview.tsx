@@ -32,7 +32,7 @@ const Overview = () => {
     return (
         <section id='overview' className='bg-white w-full flex flex-col items-center justify-center'>
             <h5 className='text-orange-600 text-center text-lg font-medium mt-10'>Riseru Goodies</h5>
-            <h1 className='text-black text-center text-3xl font-semibold'>For Your Happines!</h1>
+            <h1 className='text-black text-center text-3xl font-semibold'>For Your Happiness!</h1>
             <div className='grid my-10 md:grid-cols-3 md:gap-6'>
                 {cardData.map((card, index) => (
                     <div key={index} className='my-3 md:my-0 transform transition duration-500 hover:scale-105 hover:drop-shadow-2xl'>
