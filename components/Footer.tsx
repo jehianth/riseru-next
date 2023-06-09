@@ -86,13 +86,13 @@ const Footer = () => {
                     )}
                     <h6 className='text-xs text-zinc-300 hover:text-orange-600 ml-2 w-fit'>support@riseru.id</h6>
                 </Link>
-                <Link href='https://wa.me/6285155433460' target='_blank' className='flex flex-row cursor-pointer' onMouseEnter={handlePhoneMouseEnter} onMouseLeave={handlePhoneMouseLeave}>
+                <Link href='https://wa.me/6286187656453' target='_blank' className='flex flex-row cursor-pointer' onMouseEnter={handlePhoneMouseEnter} onMouseLeave={handlePhoneMouseLeave}>
                     {isPhoneHovered ? (
                         <Image src='/telephone(1).png' width={16} height={16} alt=''/>
                     ) : (
                         <Image src='/telephone.png' width={16} height={16} alt=''/>
                     )}
-                    <h6 className='text-xs text-zinc-300 hover:text-orange-600 ml-2 w-fit'>+62 851-5543-3460</h6>
+                    <h6 className='text-xs text-zinc-300 hover:text-orange-600 ml-2 w-fit'>+62 861-8765-6453</h6>
                 </Link>
                 <h5 className='font-semibold mt-8 text-white'>Support</h5>
                 <Link href='/support'>
