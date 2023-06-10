@@ -22,8 +22,18 @@ const Footer = () => {
     };
     const [visitorCount, setVisitorCount] = useState(0);
     useEffect(() => {
-        setVisitorCount((prevCount) => prevCount + 1);
+        // Mendapatkan jumlah pengunjung dari localStorage
+        const storedVisitorCount = localStorage.getItem("visitorCount");
+
+        // Mengupdate jumlah pengunjung saat komponen dimuat
+        const count = storedVisitorCount ? parseInt(storedVisitorCount) + 1 : 1;
+        setVisitorCount(count);
     }, []);
+
+    useEffect(() => {
+        // Menyimpan jumlah pengunjung ke localStorage setiap kali visitorCount berubah
+        localStorage.setItem("visitorCount", visitorCount.toString());
+    }, [visitorCount]);
     return (
         <section className="bg-black flex flex-col items-center ">
             <div className='hidden w-full md:flex flex-row items-center justify-between px-28 py-10'>
