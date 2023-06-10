@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Cookies from "js-cookie";
 
 const Footer = () => {
     const [isEmailHovered, setEmailHovered] = useState(false);
@@ -22,17 +23,17 @@ const Footer = () => {
     };
     const [visitorCount, setVisitorCount] = useState(0);
     useEffect(() => {
-        // Mendapatkan jumlah pengunjung dari localStorage
-        const storedVisitorCount = localStorage.getItem("visitorCount");
+        // Mendapatkan jumlah pengunjung dari cookie
+        const storedVisitorCount = Cookies.get("visitorCount");
 
         // Mengupdate jumlah pengunjung saat komponen dimuat
-        const count = storedVisitorCount ? parseInt(storedVisitorCount) + 1 : 1;
+        const count = storedVisitorCount ? parseInt(storedVisitorCount) : 0;
         setVisitorCount(count);
     }, []);
 
     useEffect(() => {
-        // Menyimpan jumlah pengunjung ke localStorage setiap kali visitorCount berubah
-        localStorage.setItem("visitorCount", visitorCount.toString());
+        // Menyimpan jumlah pengunjung ke cookie setiap kali visitorCount berubah
+        Cookies.set("visitorCount", visitorCount.toString(), { expires: 365 });
     }, [visitorCount]);
     return (
         <section className="bg-black flex flex-col items-center ">
