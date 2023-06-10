@@ -27,8 +27,8 @@ const Overview = () => {
     ];
     return (
         <section id='overview' className='bg-white w-full flex flex-col items-center justify-center'>
-            <h5 className='text-orange-600 text-center text-3xl font-bold mt-10'>Riseru Goodies</h5>
-            <h1 className='text-black text-center text-lg font-semibold'>For You!</h1>
+            <h1 className='text-orange-600 text-center text-3xl md:text-4xl font-bold mt-10'>Riseru Goodies</h1>
+            <h5 className='text-black text-center text-lg md:text-xl font-semibold'>For You!</h5>
             <Image src='/logo-base.png' width={174} height={109} alt='' className='hidden md:block -translate-y-20 -translate-x-[650px]'/>
             <Image src='/logo-base.png' width={81} height={51} alt='' className='md:hidden -translate-y-14 -rotate-12 -translate-x-44'/>
             <div className='grid md:-mt-14 mb-8 md:grid-cols-4 md:gap-6'>
