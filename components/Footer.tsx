@@ -127,7 +127,8 @@ const Footer = () => {
                 </Link>
             </div>
             <hr className='px-48 md:px-[90vh] border-zinc-500'/>
-            <h6 className='text-xs text-zinc-400 py-5 w-fit'>© 2023 Riseru. All rights reserved. Visitor Count: {visitorCount}</h6>
+            <h6 className='text-xs text-zinc-400 pt-5 w-fit'>© 2023 Riseru. All rights reserved.</h6>
+            <h6 className='text-xs text-zinc-400 pt-1 pb-5 w-fit'>Visitor Count : <p className="inline-flex p-1 w-fit bg-zinc-700 rounded-sm">{visitorCount}</p></h6>
         </section>
     )
 }
