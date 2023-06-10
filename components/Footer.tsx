@@ -27,14 +27,12 @@ const Footer = () => {
         const storedVisitorCount = Cookies.get("visitorCount");
 
         // Mengupdate jumlah pengunjung saat komponen dimuat
-        const count = storedVisitorCount ? parseInt(storedVisitorCount) : 0;
+        const count = storedVisitorCount ? parseInt(storedVisitorCount) + 1 : 1;
         setVisitorCount(count);
-    }, []);
 
-    useEffect(() => {
-        // Menyimpan jumlah pengunjung ke cookie setiap kali visitorCount berubah
-        Cookies.set("visitorCount", visitorCount.toString(), { expires: 365 });
-    }, [visitorCount]);
+        // Menyimpan jumlah pengunjung ke cookie
+        Cookies.set("visitorCount", count.toString(), { expires: 365 });
+    }, []);
     return (
         <section className="bg-black flex flex-col items-center ">
             <div className='hidden w-full md:flex flex-row items-center justify-between px-28 py-10'>
