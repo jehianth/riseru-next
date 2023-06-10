@@ -1,5 +1,5 @@
 'use client'
-import {useState} from 'react'
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,6 +20,10 @@ const Footer = () => {
     const handlePhoneMouseLeave = () => {
         setPhoneHovered(false);
     };
+    const [visitorCount, setVisitorCount] = useState(0);
+    useEffect(() => {
+        setVisitorCount((prevCount) => prevCount + 1);
+    }, []);
     return (
         <section className="bg-black flex flex-col items-center ">
             <div className='hidden w-full md:flex flex-row items-center justify-between px-28 py-10'>
@@ -113,7 +117,7 @@ const Footer = () => {
                 </Link>
             </div>
             <hr className='px-48 md:px-[90vh] border-zinc-500'/>
-            <h6 className='text-xs text-zinc-400 py-5 w-fit'>© 2023 Riseru. All rights reserved.</h6>
+            <h6 className='text-xs text-zinc-400 py-5 w-fit'>© 2023 Riseru. All rights reserved. Visitor Count: {visitorCount}</h6>
         </section>
     )
 }
